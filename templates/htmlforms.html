@@ -9,7 +9,8 @@
 <body>
     <center>
         <h1> Html forms</h1>
-        <form>
+        <form method="POST">
+            {% csrf_token %}
             <label for="Un">Html forms</label>
             <input type="text" name="Un" id="Un">
             <br>

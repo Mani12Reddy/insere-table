@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Select Any topic so i can display webpages of it</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="topic">Topic_name</label>
+            <select name="topic" id="topic" multiple>
+                {% for topic in topics %}
+                <option value="{{topic}}">{{topic.topic_name}}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <input type="submit" value="Retrieve">
+
+        </form>
+    </center>
+<h1>i am here</h1>
+    {% for i in topics %}
+    <h1>i am here</h1>
+           <h1>{{i.topic_name}}</h1>
+    {% endfor %}
+    
+</body>
+</html>
